@@ -161,4 +161,7 @@ In place of an expression
   ![image](https://github.com/mkc-lomio/SQL/assets/78136159/6c78d6c8-2589-4e1b-b5c2-5c275c9456ae)
 
  
+### UNION 
+
+![image](https://github.com/mkc-lomio/SQL/assets/78136159/fa2e7188-a1e7-4bfb-9b83-b9e748d5671e)
 
