@@ -112,3 +112,21 @@ Output usage with DML statements.
  Scenario 1: If you want to develop an audit feature where you won't know what the previous data was and with what it has been changed with.
  
  Scenario 2: If you are writing the data migration script where you will be having a complex logic want to retain the updated/inserted record to perform another set of operations with that data in the same-store procedure.
+
+
+### SubQuery
+
+You can use a subquery in many places:
+
+In place of an expression
+ 
+ - With IN or NOT IN
+ - With ANY or ALL
+ - With EXISTS or NOT EXISTS
+ - In UPDATE, DELETE, or INSERT statement
+ - In the FROM clause
+
+
+ A correlated subquery is a subquery that uses the values of the outer query. In other words, the correlated subquery depends on the outer query for its values.
+
+ Moreover, a correlated subquery is executed repeatedly, once for each row evaluated by the outer query. The correlated subquery is also known as a repeating subquery.
