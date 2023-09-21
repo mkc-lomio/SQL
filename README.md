@@ -130,3 +130,35 @@ In place of an expression
  A correlated subquery is a subquery that uses the values of the outer query. In other words, the correlated subquery depends on the outer query for its values.
 
  Moreover, a correlated subquery is executed repeatedly, once for each row evaluated by the outer query. The correlated subquery is also known as a repeating subquery.
+
+
+ ### JOINS
+
+ 1. CROSS JOIN - The CROSS JOIN gets a row from the first table (T1) and then creates a new row for every row in the second table (T2).
+    
+ ![image](https://github.com/mkc-lomio/SQL/assets/78136159/1b31fd79-c13a-4ed0-992f-c10e525f7005)
+
+ 2. SELF-JOIN - allows you to join a table to itself. It helps query hierarchical data or compare rows within the same table.
+
+ ![image](https://github.com/mkc-lomio/SQL/assets/78136159/6bcd687f-5e7f-4213-96e9-995b0a926be0)
+
+ 3. FULL-JOIN - returns a result set that contains all rows from both left and right tables, with the matching rows from both sides where available. In case there is no match, the missing side will have NULL values.
+
+ ![image](https://github.com/mkc-lomio/SQL/assets/78136159/9209581c-fdc3-4971-887d-4b6396483919)
+
+ 4. RIGHT-JOIN - The right join or right outer join selects data starting from the right table. It is a reversed version of the left join.
+
+ ![image](https://github.com/mkc-lomio/SQL/assets/78136159/5c0a02bb-a685-4347-b92f-19c7a22da86a)
+
+ 5. LEFT-JOIN - Left Join selects data starting from the left table and matching rows in the right table.
+
+   If a row in the left table does not have a matching row in the right table, the columns of the right table will have nulls.
+
+   ![image](https://github.com/mkc-lomio/SQL/assets/78136159/104daa9e-07c4-47da-9801-771e20764c13)
+
+6. INNER JOIN - Inner Join produces a data set that includes rows from the left table, and matching rows from the right table.
+
+  ![image](https://github.com/mkc-lomio/SQL/assets/78136159/6c78d6c8-2589-4e1b-b5c2-5c275c9456ae)
+
+ 
+
