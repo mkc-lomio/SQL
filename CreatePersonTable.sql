@@ -1,0 +1,15 @@
+CREATE TABLE Persons (
+    Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
+    LastName NVARCHAR(MAX),
+    FirstName NVARCHAR(MAX),
+	ImageURI VARCHAR(MAX),
+	Gender CHAR(1),
+	IsActive BIT NULL,
+	Grade DECIMAL NULL,
+	CashOnHand MONEY,
+	Age INT NOT NULL,
+	CreatedDate DATETIME
+);
+
+SELECT * FROM Persons
+
