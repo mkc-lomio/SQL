@@ -26,3 +26,16 @@ SELECT TOP 1
 FROM 
     Persons
 
+SELECT TOP 1
+    LastName,
+	FirstName,
+	Grade,
+	CashOnHand,
+	IsActive,
+    COALESCE(
+        FirstName, -- NULL
+        IsActive, -- NULL
+		CashOnHand
+    ) AS NotNull
+FROM
+    Persons;
