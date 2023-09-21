@@ -165,3 +165,8 @@ In place of an expression
 
 ![image](https://github.com/mkc-lomio/SQL/assets/78136159/fa2e7188-a1e7-4bfb-9b83-b9e748d5671e)
 
+### Intersect 
+
+![image](https://github.com/mkc-lomio/SQL/assets/78136159/879781d8-699c-4e9e-bcda-1f19712dc1fc)
+
+
