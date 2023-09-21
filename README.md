@@ -176,13 +176,18 @@ In place of an expression
 
  Views:
 
+you should use views when you want to simplify data access, enforce security policies, or create reusable query structures.
+
  - Query Reusability: Views can be used to encapsulate commonly used SQL queries.
  - Performance: In some cases, views can improve query performance. They allow you to precompute and store complex queries, reducing the need for repeatedly executing the same query logic.
  - Data Transformation: Views can be used to transform data into a more suitable format for reporting or analysis. For example, you can create a view that calculates aggregates or pivots data.
 
  Stored Procedures:
 
+ Use stored procedures when you need to encapsulate business logic, manage transactions, optimize performance, or enforce security at the operation level. 
+
  - Business Logic: Stored procedures are used to encapsulate business logic or application-specific operations within the database.
  - Code Reusability: Stored procedures can be called from multiple parts of an application, promoting code reusability and reducing redundancy.
  - Transaction Management: Stored procedures can be used to group multiple SQL statements into a single transaction.
  - Performance Optimization: Stored procedures can be optimized by the database engine, which can result in better performance compared to executing equivalent SQL statements in a client application.
+
