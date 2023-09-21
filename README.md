@@ -48,9 +48,9 @@ GOOD `` SELECT c.country_id, c.country_name FROM countries c WHERE EXISTS (SELEC
    
    This query will pull only the expected results of Charleston, Charlotte, and Charlton.
    
-8. Use LIMIT to sample query results
+8. Use LIMIT/TOP to sample query results
    
-   - Before running a query for the first time, ensure the results will be desirable and meaningful by using a LIMIT statement.
+   - Before running a query for the first time, ensure the results will be desirable and meaningful by using a LIMIT/TOP statement.
      
 9. Run your query during off-peak hours - make sure no conflict when executing a large query.
     
