@@ -41,8 +41,45 @@ DECLARE @EmployeeReimbursement TABLE (
 );
 
 
-	 MERGE EmployeeReimbursements t 
-      USING @EmployeeReimbursement s ON (t.Id = @employeeReimbursementId)
+INSERT INTO @EmployeeReimbursement (
+        Id,
+        ReimbursementTypeId, 
+        EmployeeId, 
+        ReviewerEmployeeId, 
+        ReimbursementStatusId, 
+        AdditionalInfo, 
+        TotalAmount, 
+        TransactionDate, 
+        ApprovedDate, 
+        RequestedDate, 
+        ReviewerRemarks, 
+        ModifiedBy, 
+        CreatedBy, 
+        IsActive, 
+        DateCreated, 
+        DateModified)
+         VALUES (
+		 @employeeReimbursementId,
+        @reimbursementTypeId, 
+        @employeeId, 
+     @reviewerEmployeeId,
+	 @reimbursementStatusId,
+     @additionalInfo,
+	 @totalAmount,
+	 @transactionDate,
+	 @approvedDate,
+	 @requestedDate,
+	 @reviewerRemarks,
+	 @modifiedBy,
+	 @createdBy,
+	 @isActive,
+	 @dateCreated,
+	 @dateModified
+         );
+
+
+	 MERGE  EmployeeReimbursements t 
+      USING  @EmployeeReimbursement s  ON (t.Id = s.Id)
 WHEN MATCHED
     THEN UPDATE SET 
         t.ReimbursementTypeId = @reimbursementTypeId,
