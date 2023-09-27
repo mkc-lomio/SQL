@@ -21,9 +21,28 @@ ALTER PROCEDURE kis_spEmployeeReimbursement_UpdateInsertRecord (
 AS
 BEGIN
 
+DECLARE @EmployeeReimbursement TABLE (
+    Id INT,
+    ReimbursementTypeId INT,
+	EmployeeId INT,
+	ReviewerEmployeeId INT,
+	ReimbursementStatusId INT,
+    AdditionalInfo NVARCHAR(MAX),
+	TotalAmount DECIMAL,
+	TransactionDate DATETIME,
+	ApprovedDate DATETIME,
+	RequestedDate DATETIME,
+	ReviewerRemarks NVARCHAR(MAX),
+	ModifiedBy VARCHAR(100),
+	CreatedBy VARCHAR(100),
+	IsActive BIT,
+	DateCreated DATETIME,
+	DateModified DATETIME
+);
+
+
 	 MERGE EmployeeReimbursements t 
-	  USING EmployeeReimbursements s
-      ON (t.Id = @employeeReimbursementId)
+      USING @EmployeeReimbursement s ON (t.Id = @employeeReimbursementId)
 WHEN MATCHED
     THEN UPDATE SET 
         t.ReimbursementTypeId = @reimbursementTypeId,
@@ -73,8 +92,6 @@ WHEN NOT MATCHED BY TARGET
 	 @isActive,
 	 @dateCreated,
 	 @dateModified
-         )
-WHEN NOT MATCHED BY SOURCE 
-    THEN DELETE;
+         );
 
 END;
