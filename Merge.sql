@@ -3,8 +3,8 @@
 -- the MERGE statement that allows you to perform three actions at the same time
    -- to update data and to insert data otherwise delete
 
-MERGE sales.category t 
-    USING sales.category_staging s
+MERGE sales.category t  -- TARGET
+    USING sales.category_staging s -- SOURCE
 ON (s.category_id = t.category_id)
 WHEN MATCHED
     THEN UPDATE SET 
