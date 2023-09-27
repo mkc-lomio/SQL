@@ -132,3 +132,23 @@ WHEN NOT MATCHED BY TARGET
          );
 
 END;
+
+
+--- Execution
+EXEC kis_spEmployeeReimbursement_UpdateInsertRecord
+@employeeReimbursementId = 15000006,
+ @reimbursementTypeId = 1,
+	 @employeeId = 1,
+	 @reviewerEmployeeId = 1,
+	 @reimbursementStatusId = 1,
+     @additionalInfo = 'None',
+	 @totalAmount = 10.00,
+	 @transactionDate =  '2023-01-26 13:23:54.677',
+	 @approvedDate = '2023-01-26 13:23:54.677',
+	 @requestedDate =  '2023-01-26 13:23:54.677',
+	 @reviewerRemarks = 'GOOD',
+	 @modifiedBy  = 'System',
+	 @createdBy = 'System',
+	 @isActive = 1,
+	 @dateCreated = '2023-01-26 13:23:54.677',
+	 @dateModified = '2023-01-26 13:23:54.677'
