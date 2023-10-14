@@ -191,3 +191,8 @@ you should use views when you want to simplify data access, enforce security pol
  - Transaction Management: Stored procedures can be used to group multiple SQL statements into a single transaction.
  - Performance Optimization: Stored procedures can be optimized by the database engine, which can result in better performance compared to executing equivalent SQL statements in a client application.
 
+NOTE:
+- Nested Declare variable in stored procedure is not advisable
+
+References:
+Date Conversion: https://stackoverflow.com/questions/74385/how-to-convert-datetime-to-varchar
